@@ -1,7 +1,7 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
-import styles from '../styles/home.module.css';
+import styles from '../styles/home.css';
 export default function Home() {
   console.log(styles)
   return (<Layout>

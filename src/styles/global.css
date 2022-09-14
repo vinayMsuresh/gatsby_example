@@ -55,10 +55,3 @@ footer p {
     color: #bbb;
     margin: 40px auto;
 }
-
-.header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
-    align-items: center;
-}
