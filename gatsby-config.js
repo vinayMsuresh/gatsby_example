@@ -36,6 +36,7 @@ module.exports = {
   siteMetadata: {
     title: 'Web Taskers',
     description: 'Web dev and test portfolio',
-    copyright: 'This website is copyright 2022 web taskers'
+    copyright: 'This website is copyright 2022 web taskers',
+    contact: 'me434@webtaskers.com'
   }
 }

@@ -4,8 +4,8 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import '../../styles/project.css';
 export default function Portfolio({ data }) {
-  const projects = data.allMarkdownRemark.nodes;
-
+  const projects = data.projects.nodes;
+  const contact = data.contact.siteMetadata.contact
   return (
     <Layout>
         <div className='portfolio'>
@@ -22,6 +22,7 @@ export default function Portfolio({ data }) {
                 </Link>
               ))}
             </div>
+            <p>Like the above content contact me at {contact}</p>
         </div>
     </Layout>
   )
@@ -29,7 +30,7 @@ export default function Portfolio({ data }) {
 
 export const query = graphql`
 query ProjectsPage {
-  allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+  projects: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
     nodes {
       frontmatter {
         title
@@ -42,6 +43,11 @@ query ProjectsPage {
         }
       }
       id
+    }
+  }
+  contact: site {
+    siteMetadata {
+      contact
     }
   }
 }`
