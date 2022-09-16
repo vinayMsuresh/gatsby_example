@@ -8,7 +8,7 @@ export default function Home({ data }) {
   return (<Layout>
     <section className='header'>
       <div>
-        <h2>Design pages</h2>
+        <h2>Design pages by using taskers</h2>
         <h3>Implement test and deploy</h3>
         <p>UI UX designers based on react and other frameworks</p>
         <Link className='btn' to='/projects'>Our Portfolio</Link>
